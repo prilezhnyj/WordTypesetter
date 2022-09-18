@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		EC64753928D74E6800E8ECCB /* WordTypesetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC64753828D74E6800E8ECCB /* WordTypesetterApp.swift */; };
-		EC64753B28D74E6800E8ECCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC64753A28D74E6800E8ECCB /* ContentView.swift */; };
+		EC64753B28D74E6800E8ECCB /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC64753A28D74E6800E8ECCB /* StartView.swift */; };
 		EC64753D28D74E6900E8ECCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC64753C28D74E6900E8ECCB /* Assets.xcassets */; };
 		EC64754028D74E6900E8ECCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC64753F28D74E6900E8ECCB /* Preview Assets.xcassets */; };
+		EC64754728D7544B00E8ECCB /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC64754628D7544B00E8ECCB /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC64753528D74E6800E8ECCB /* WordTypesetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordTypesetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC64753828D74E6800E8ECCB /* WordTypesetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypesetterApp.swift; sourceTree = "<group>"; };
-		EC64753A28D74E6800E8ECCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC64753A28D74E6800E8ECCB /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		EC64753C28D74E6900E8ECCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC64753F28D74E6900E8ECCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC64754628D7544B00E8ECCB /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				EC64753828D74E6800E8ECCB /* WordTypesetterApp.swift */,
-				EC64753A28D74E6800E8ECCB /* ContentView.swift */,
+				EC64753A28D74E6800E8ECCB /* StartView.swift */,
+				EC64754628D7544B00E8ECCB /* GameView.swift */,
 				EC64753C28D74E6900E8ECCB /* Assets.xcassets */,
 				EC64753E28D74E6900E8ECCB /* Preview Content */,
 			);
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC64753B28D74E6800E8ECCB /* ContentView.swift in Sources */,
+				EC64753B28D74E6800E8ECCB /* StartView.swift in Sources */,
+				EC64754728D7544B00E8ECCB /* GameView.swift in Sources */,
 				EC64753928D74E6800E8ECCB /* WordTypesetterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +274,13 @@
 				DEVELOPMENT_TEAM = 66STM82H6X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Word Typesetter";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +288,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.botalov.WordTypesetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +308,13 @@
 				DEVELOPMENT_TEAM = 66STM82H6X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Word Typesetter";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +322,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.botalov.WordTypesetter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
