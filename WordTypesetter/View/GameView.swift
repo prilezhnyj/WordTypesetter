@@ -12,8 +12,9 @@ let widthScreen = UIScreen.main.bounds
 struct GameView: View {
     
     @State private var collectedWord = ""
-    
     @Environment(\.presentationMode) var presentationMode
+    
+    var viewModel: GameViewModel?
     
     var body: some View {
         
@@ -34,22 +35,22 @@ struct GameView: View {
             
             Spacer()
             
-            Text("Исходное слов")
+            Text(viewModel?.word ?? "")
                 .font(.largeTitle).bold()
             
             HStack(spacing: 8) {
                 VStack {
-                    Text("0")
+                    Text("\(viewModel?.userOne.totla ?? 0)")
                         .font(.largeTitle).bold()
-                    Text("Максим")
+                    Text(viewModel?.userOne.name ?? "")
                 }
                 .frame(width: widthScreen.width / 2 - 16, height: widthScreen.width / 2 - 16)
                 .background(Color.gray)
                 
                 VStack {
-                    Text("0")
+                    Text("\(viewModel?.userTwo.totla ?? 0)")
                         .font(.largeTitle).bold()
-                    Text("Максим")
+                    Text(viewModel?.userTwo.name ?? "")
                 }
                 .frame(width: widthScreen.width / 2 - 16, height: widthScreen.width / 2 - 16)
                 .background(Color.gray)
@@ -58,7 +59,11 @@ struct GameView: View {
             TextField("Введите ваше слово", text: $collectedWord).textFieldStyle(.roundedBorder)
             
             Button {
-                //
+                let total = viewModel?.check(word: collectedWord)
+                
+                if total! > 1  {
+                    self.collectedWord = ""
+                }
             } label: {
                 Text("Готово")
                     .frame(maxWidth: .infinity, maxHeight: 50)

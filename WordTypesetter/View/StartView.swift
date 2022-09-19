@@ -17,7 +17,7 @@ struct StartView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 40) {
-            Text("Сборщик слов ")
+            Text("Сборщик слов")
                 .font(.largeTitle).bold()
             
             VStack(alignment: .leading, spacing: 10) {
@@ -40,7 +40,7 @@ struct StartView: View {
                     .shadow(color: Color.green, radius: 5, x: 0, y: 4)
             }
             .fullScreenCover(isPresented: $isTransition) {
-                GameView()
+                GameView(viewModel: GameViewModel(userOne: UserModel(name: namePlayerOne, totla: 0), userTwo: UserModel(name: namePlayerTwo, totla: 0), word: "Безопасность"))
             }
 
         }.padding()
